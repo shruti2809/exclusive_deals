@@ -1,0 +1,58 @@
+<div class="container">
+  
+  <h2 class="heading">There are 10 people in the queue.</h2>
+  
+  <div class="queue">
+    <% 10.times do %>
+    <%= image_tag "man-green.png", class: "man" %>
+    <% end %>
+  </div>
+  <div class="ticket-form">
+    <div class="row">
+      <%= simple_form_for @user do |f| %>
+      <%= f.input :name, label: false, placeholder: "Enter your Name", class: 'form-control' %>
+      <%= f.input :email, label: false, placeholder: "Enter your Email", class: 'form-control' %>
+      <%= f.submit "Get Ticket", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<form class="form-horizontal">-->
+<!--  <div class="form-group">-->
+<!--    <div class="col-xs-8 col-md-5">-->
+<!--      <input type="text" class="form-control" id="inputName" placeholder="Enter your Name">-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <div class="col-xs-8 col-md-5">-->
+<!--      <input type="email" class="form-control" id="inputPassword" placeholder="Enter your email ">-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <div class="col-xs-offset-2 col-xs-3">-->
+<!--      <button type="submit" class="btn btn-success ticket-button">Get my ticket</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</form>-->
