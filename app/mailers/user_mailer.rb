@@ -5,10 +5,14 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.code_confirmation.subject
   #
+
   def code_confirmation(user)
     @greeting = "Hi"
     @user9 = user
+    @deal_time = (user.created_at + 1.minute).strftime("%I:%M:%S")
 
     mail to: user.email, subject: "Code confirmation"
   end
+
+
 end
